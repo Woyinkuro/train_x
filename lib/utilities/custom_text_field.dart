@@ -13,7 +13,6 @@ class customTextField extends StatelessWidget {
       child: TextField(
 
         decoration: InputDecoration(
-
           labelText: labelText,
           labelStyle: TextStyle(fontSize: 20),
           border: OutlineInputBorder(

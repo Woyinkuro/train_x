@@ -45,7 +45,15 @@ class _SignUpState extends State<SignUp> {
               SizedBox(height: 28,),
               customTextField(labelText: "password", hintText: "Must be a minimum of 8 characters"),
               SizedBox(height: 58,),
-              customButton(text: "Next",)
+              customButton(text: "Next",),
+              SizedBox(height: 32,),
+              Row(
+                children: [
+                  SizedBox(width: 38,),
+                  Text("Already have an account?", style: TextStyle(color: Colors.grey),),
+                  Text("Sign in", style: TextStyle(color: Color(0xFF0F3CD9)),)
+                ],
+              )
             ],
           ),
         ),
