@@ -1,6 +1,7 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
+import 'package:train_x/presentation/screens/home/main_home.dart';
 import 'package:train_x/utilities/custom_button.dart';
 import 'package:train_x/utilities/custom_text_field.dart';
 
@@ -69,7 +70,7 @@ class _FacialVerificationState extends State<FacialVerification> {
             SizedBox(
               height: 64,
             ),
-            customButton(text: "Take Photo"),
+            customButton(text: "Take Photo", onPressed: () { Navigator.pushNamed(context, MainHome.id);},),
             SizedBox(
               height: 32,
             ),

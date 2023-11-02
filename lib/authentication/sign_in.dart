@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:train_x/presentation/screens/home/main_home.dart';
 import 'package:train_x/utilities/custom_text_field.dart';
 import 'package:train_x/utilities/custom_button.dart';
 
@@ -35,7 +36,7 @@ class _SignInState extends State<SignIn> {
             SizedBox(height: 10,),
             customTextField(labelText: 'Password', hintText: '*******'),
             SizedBox(height: 48,),
-            customButton(text: 'Next',),
+            customButton(text: 'Next', onPressed: () {  Navigator.pushNamed(context, MainHome.id);},),
             SizedBox(height: 32,),
             Row(
               children: [

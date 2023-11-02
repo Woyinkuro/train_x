@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:train_x/authentication/email.dart';
 
 import '../utilities/custom_text_field.dart';
 import 'package:train_x/utilities/custom_button.dart';
@@ -45,7 +46,9 @@ class _SignUpState extends State<SignUp> {
               SizedBox(height: 28,),
               customTextField(labelText: "password", hintText: "Must be a minimum of 8 characters"),
               SizedBox(height: 58,),
-              customButton(text: "Next",),
+              customButton(text: "Next", onPressed: () {
+                Navigator.pushNamed(context, Email.id);
+              },),
               SizedBox(height: 32,),
               Row(
                 children: [

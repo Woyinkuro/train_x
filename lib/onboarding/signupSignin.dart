@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:train_x/authentication/email.dart';
+import 'package:train_x/authentication/sign_in.dart';
+import 'package:train_x/authentication/signup.dart';
+import 'package:train_x/presentation/screens/home/main_home.dart';
 
 import '../utilities/custom_button.dart';
 
@@ -15,7 +19,7 @@ class SignUpSignIn extends StatelessWidget {
               color: Colors.transparent,
               image: DecorationImage(
                 image: AssetImage("images/train.png"),
-                fit: BoxFit.contain,
+                fit: BoxFit.fill,
               ),
             ),
           ),
@@ -46,7 +50,9 @@ class SignUpSignIn extends StatelessWidget {
                   height: 130,
                 ),
                 //create acct button start1
-                customButton(text: "Create Account",),
+                customButton(text: "Create Account", onPressed: () {
+                  Navigator.pushNamed(context, SignUp.id);
+                },),
                 //create acct button end1
                 SizedBox(height: 32,),
                 //create acct button start2
@@ -54,7 +60,9 @@ class SignUpSignIn extends StatelessWidget {
                   width: 343,
                   height: 56,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, SignIn.id);
+                    },
                     child: Text("Login", style: TextStyle(color: Colors.white),),
                     style: ElevatedButton.styleFrom(
                       primary: Colors.transparent,

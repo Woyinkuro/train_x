@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
+import 'package:train_x/authentication/bvn.dart';
 import 'package:train_x/utilities/custom_button.dart';
 
 class Email extends StatefulWidget {
@@ -68,7 +69,7 @@ class _EmailState extends State<Email> {
               ),
             ),
             SizedBox(height: 64,),
-            customButton(text: "Verify"),
+            customButton(text: "Verify", onPressed: () { Navigator.pushNamed(context, Bvn.id);},),
             SizedBox(height: 32,),
             Row(
               children: [

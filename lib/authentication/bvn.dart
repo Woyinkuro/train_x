@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pinput/pinput.dart';
+import 'package:train_x/authentication/facial_verification.dart';
 import 'package:train_x/utilities/custom_button.dart';
 import 'package:train_x/utilities/custom_text_field.dart';
 
@@ -17,7 +17,7 @@ class _BvnState extends State<Bvn> {
       body: SafeArea(
         child: Column(
           children: [
-            Row(
+            const Row(
               children: [
                 SizedBox(
                   width: 35,
@@ -31,25 +31,24 @@ class _BvnState extends State<Bvn> {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 40,
             ),
-            Row(
+            const Row(
               children: [
                 SizedBox(
                   width: 36,
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 24,
             ),
             //pinput
            customTextField(labelText: "Bvn", hintText: "Enter your BVN for verification",),
-            SizedBox(height: 64,),
-            customButton(text: "Next"),
-            SizedBox(height: 32,),
-
+            const SizedBox(height: 64,),
+            customButton(text: "Next", onPressed: () {Navigator.pushNamed(context, FacialVerification.id);},),
+            const SizedBox(height: 32,),
           ],
         ),
       ),
